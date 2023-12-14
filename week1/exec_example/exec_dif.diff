@@ -1,0 +1,30 @@
+4a5
+> 
+8c9
+< 	printf("Hello from thread %d",*(int*)args);
+---
+> 	printf("Hello from thread %d\n",*(int*)args);
+32c33,37
+< 		if(pthread_create(&tid[i],&attr,runner,(void*)i)==0){
+---
+> 		
+> 		int*j = (int*)malloc(sizeof(int));
+> 		*j = i;
+> 
+> 		if(pthread_create(&tid[i],&attr,runner,j)==0){
+34c39
+< 			printf("Thread created succesfull :D");
+---
+> 			printf("Thread created succesfull :D\n");
+38c43
+< 			printf("Thread creation unccessful :'D ");
+---
+> 			printf("Thread creation unccessful :'D\n ");
+48c53
+< 			printf("Thread joined successfully :D ");
+---
+> 			printf("Thread joined successfully :D \n");
+53c58
+< 			printf("Threads not joined :'D ");
+---
+> 			printf("Threads not joined :'D\n");

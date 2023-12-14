@@ -1,0 +1,43 @@
+We can redirect the output of diff command to a diff file wherein the changes made in one file is redirected to a different diff file. 
+
+The contents of the diff file can be patched with the help of patch command. The patch takes a diff file and applies the changes of the diff file into the other file. The patch always doesnt succeed but in most cases it will.
+
+For instance for redirecting the diff output of file1.txt and file2.txt into changes.diff we use the > symbol
+
+commands:
+
+touch changes.diff
+diff file1.txt file2.txt > changes.diff will redirect the output of diff into changes.diff
+
+
+** For aplying the diff into the file we use the patch command 
+patch file1.txt changes.diff applies the changes in changes.diff into file1.txt
+
+Why use diff and patch ? Its because diff and patch can be applied on directories. Suppose we have a directory where there are many files applying diff on the directory will tell us what file is to be placed in which directory resulting in easier applying of changes
+
+** Suppose our colleauge has created a file called exec.c but it errors out. We fix the error (exec_fix.c) and send the diff file to our colleauge who then applies patch to fix the error
+
+commands :
+
+diff exec.c exec_fix.c > exec_diff.diff
+
+on colleauge side:
+
+To view changes :
+
+vi exec_diff.diff
+
+Apply changes :
+patch exec.c exec_diff.diff
+
+
+
+
+
+
+
+
+
+
+
+  
