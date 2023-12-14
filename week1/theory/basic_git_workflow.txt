@@ -1,0 +1,27 @@
+Basic git work flow consists of :
+
+1) Git init :
+
+initialize empty git repository. This creates an empty git directory that contains the snapshot of all the files files that have been commited previously 
+
+2) Git add :
+
+Adds all the files in the respository to the staging area. Staging area is an area where the files set to be tracked are present. 
+
+3) Git commit :
+
+Saves the snapshot of the project in the git directory so it can be used later for version control
+
+4) Git config --global user.name # Sets up your username 
+   Git config --global user.email  # Sets up your email
+
+5) Git config -l # View all your global configurations 
+
+6) git stash # Store all the changes in an area and then modify the repository an dapply the stash when needed 
+
+Useful for a situation when there is chnages made to a repository and at the same time we want to pull changes from a remote repository. In that case there can be a conflict in the code so first use git stash to stash away current changes then use git pull to pull in all the changes from the remote repository and then use git stash apply to apply the stashed changes 
+
+7) git stash apply 
+
+
+
