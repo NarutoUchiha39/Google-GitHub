@@ -1,0 +1,18 @@
+** The command git checkout takes a file that has been modified and takes it back to the original file in the last stored commit
+
+
+** command git checkout -p takes each and every changes and asks if we want to revert that change or not 
+
+
+** command git reset HEAD <file_name> helps to reset the particular file that was staged by mistake to unstage it 
+
+
+** command git ammend takes the last commit and helps to make any modifications upu want to make to the last commit. Useful if you accidentally didnt commit some files or want to remove files. For that simply make changes to the current working directory and type git commit --amend to edit the last commit
+
+** command git revert <commit ID> creates an inverse commit of whatever was there in the particular commit ID. In this way the history of the commit isnt lost and the inverse commit rolls back the changes we made 
+
+
+** The commit IDs are SHA1 that was made from all the details of the commit like author name time etc it is 40 characters long and ensures the integrity of the commit 
+
+
+** NEVER USE git commit --ammend for reverting

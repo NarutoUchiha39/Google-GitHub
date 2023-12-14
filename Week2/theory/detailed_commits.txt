@@ -1,0 +1,45 @@
+** In order to skip the staging area since we are sure of the commits we are going to make we use the 
+
+
+
+** git commit -a -m "message" syntax where the -a flag doesnt add any new files just tracks changes in the files that have been added already. Caution : The -a flag doesnt add any new files that were previously untracked. It adds only those files that were already being tracked by git. In this way we dont have to do git add . and then git commit but directly git commit -a 
+
+
+
+** git log -p flag tells us the list of commits and what was changed in each commit 
+the -p comes from patch with the usual ++ for lines added and -- for lines deleted as with diff -u
+
+
+
+** In order to get a more detailed view of a particular commit we use git show <identifier of the commit> this shows details of the commit passed as identifier
+
+command :
+
+git show ec5243d5168024e2bd80ec3bf77fe528df280d51 
+
+Output:
+
+commit ec5243d5168024e2bd80ec3bf77fe528df280d51 (HEAD -> main, origin/main, origin/HEAD)
+Author: NarutoUchiha39 <anirudhata123@gmail.com>
+Date:   Thu Dec 14 16:05:44 2023 +0530
+
+    Truly completed module 1
+
+diff --git a/week1/quiz/Using Git quiz/Screenshot from 2023-12-14 16-02-54.png b/week1/quiz/Using Git quiz/Screenshot from 2023-12-14 16-02-54.png
+new file mode 100644
+index 0000000..e07d3ba
+Binary files /dev/null and b/week1/quiz/Using Git quiz/Screenshot from 2023-12-14 16-02-54.png differ
+
+
+** The git log --stat flag is used to tell us about how many lines were added or removed thus gives us a summary of each commit ( What was added what was deleted etc )
+
+
+
+** git diff is used to show the difference between last commited file and the current file. It is equivalent to diff -u command
+
+
+** git add -p is an useful tool that asks us whether we want to add a change before putting them in the staging area
+
+** git diff shows difference in files only that are not staged. Once staged use git diff --staged to show thw staged commits  
+
+
