@@ -9,3 +9,6 @@
 In case of fetching updates and merging them is such a common task that git gives us one single command called ```git pull``` that does everything in one single command ( ```git fetch``` + ```git merge``` ).
 
 5) In case we want to switch to a different branch of the repo we use the ```git checkout``` command to switch to a different branch and then continue working in our local branch since local branch is now synced with the remote branch
+
+6) When there is merge conflict remove the <<<<<< and the >>>>>> along with ======= symbols and leave the code as it should be after the merge for three way merge a new commit is created that merges the branches together. Use ```git log --graph --oneline ``` to see the graph of the commits
+ 
